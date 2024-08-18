@@ -9,7 +9,7 @@ This is a software emulator for RV32I user-level ISA.
 3. Convert the elf file to a C header file.  
    ` xxd -i rvelf > rvelf.h `
 
-5. Compile the main program and run.  
+5. Compile and run the main program.  
    ` gcc main.c io.c -o main && ./main `
 
 The example program prints first 10 terms of the Fibonacci sequence.
