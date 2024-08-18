@@ -101,7 +101,7 @@ void decodePuts(char* str) {
 }
 
 void termPuts(char* str) {
-  #ifdef __NIOS2__
+#ifdef __NIOS2__
   if (row_count_r < TERM_H - 1) {
     row_count_r += 1;
   } else {
@@ -150,20 +150,3 @@ int readSwitches() {
   return *SWITCHES;
 #endif
 }
-
-// #ifdef __NIOS2__
-// #define CTRL_D 4
-// #else
-// #define CTRL_D EOF
-// #endif
-
-// #ifdef __NIOS2__
-//   clear_screen();
-//   int ln = 0;
-// #endif
-
-// #ifdef __NIOS2__
-//     snprintf(&char_buf[ln], 40, "%-8x0x%08x    ", pc, inst_u32);
-//     updateCharBuf();
-//     if (ln < CHAR_H-1) ln+=2;
-// #endif
