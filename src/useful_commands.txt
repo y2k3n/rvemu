@@ -1,0 +1,8 @@
+Compile exectuable that runs on bare metal, using custom linker script and startup code
+riscv32-unknown-elf-gcc -s -ffreestanding -nostartfiles -Tlink.ld startup.s example.c -o rvelf
+
+View disassembly, all sections
+riscv32-unknown-elf-objdump -s -d rvelf > rvelf.txt
+
+Convert elf file to c header
+xxd -i rvelf > rvelf.h
